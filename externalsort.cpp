@@ -127,7 +127,7 @@ void merge_sort(vector<string> &arr, ll l, ll r)
 }
 
 // Merges k sorted files. Names of files are assumed
-// to be 1, 2, 3, ... k
+// to be file_1, file_2, file_3, ... file_k
 void mergeFiles(char *output_file, int n, int k)
 {
     cout << "Merging Files......." << endl;
@@ -153,9 +153,6 @@ void mergeFiles(char *output_file, int n, int k)
     {
         // break if no output file is empty and
         // index i will be no. of input files
-        // if (fscanf(in[i], "%d ", &harr[i].element) != 1)
-        //     break;
-
         if (!in[i])
         {
             break;
@@ -177,7 +174,7 @@ void mergeFiles(char *output_file, int n, int k)
     // Now one by one get the minimum element from min
     // heap and replace it with next element.
     // run till all filled input files reach EOF
-    //cout<<harr[0]<<" "<<harr[1]<<" "<<harr[2]<<endl;
+   
     while (count != i)
     {
         // Get the minimum element and store it in output file
@@ -189,16 +186,8 @@ void mergeFiles(char *output_file, int n, int k)
         // Find the next element that will replace current
         // root of heap. The next element belongs to same
         // input file as the current min element.
-
-        // if (fscanf(in[root.i], "%s ", &root.element) != 1)
-        // {
-        //     root.element = INT_MAX;
-        //     count++;
-        // }
-
         if (in[root.i])
         {
-           
             string s;
             getline(in[root.i], s);
             root.element = s;
