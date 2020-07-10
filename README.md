@@ -1,5 +1,5 @@
 # external_sorting_cpp
-This document deals with the technique of external sorting which is employed when the data to be sorted is larger than the memory of the machine being used.
+This repo deals with the technique of external sorting which is employed when the data to be sorted is larger than the memory of the machine being used.
 
 External sorting is required when the data being sorted do not fit into the main memory of a computing device (usually RAM) and instead they must reside in the slower external memory (usually a hard drive). 
 External sorting typically uses a hybrid sort-merge strategy. In the sorting phase, chunks of data small enough to fit in main memory are read, sorted, and written out to a temporary file. In the merge phase, the sorted sub-files are combined into a single larger file.
